@@ -22,7 +22,7 @@ public class App
     	
         Server server = new Server(8080);
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        context.setContextPath("/hello");//digo donde voy a estar escuchando siempre en /hello aca
+       // context.setContextPath("/hello");//digo donde voy a estar escuchando siempre en /hello aca
         server.setHandler(context);
 
         /**
@@ -31,7 +31,7 @@ public class App
          */
          //
       
-      //  context.addServlet(new ServletHolder(new HelloServlet()), "/simple");
+        context.addServlet(new ServletHolder(new HelloServlet()), "/simple");
     
 
         server.start();
